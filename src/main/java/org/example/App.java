@@ -35,7 +35,7 @@ public class App {
             while (true) {
                 // Consumer that polls for records from the subscribed topic
                 // The consumed messages are processed by extracting the values for the fields "movieId", "movieName",
-                // "directorName", and "year". These fields are then passed to createMovieDirectedBy method to
+                // "directorName", and "year". These fields are then passed to the createMovieDirectedBy method to
                 // make entries in the Neo4j graph database
                 ConsumerRecords<String, String> records = consumer.poll(Duration.ofMillis(100));
                 for (ConsumerRecord<String, String> record : records) {
